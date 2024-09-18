@@ -5,9 +5,8 @@
   <thead>
 
   <td>title</td>
-
   <td>content</td>
-
+  <td>category</td>
   <td>action</td>
 
   </thead>
@@ -20,7 +19,7 @@
 
       <td><%= post.content %></td>
 
-      <td></td>
+      <td><%= post.categories.pluck(:name).join(',') %></td>
 
       <td>
         <%= link_to 'Show', post_path(post) %>
